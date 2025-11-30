@@ -4,7 +4,7 @@ metadata:
   name: bedeployment
   namespace: tmb13be
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: backend
@@ -25,4 +25,5 @@ spec:
             valueFrom:
               secretKeyRef:
                 name: backend-secret
+
                 key: MONGO_URI
